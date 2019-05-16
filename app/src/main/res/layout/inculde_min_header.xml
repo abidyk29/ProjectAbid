@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:orientation="vertical"
+    android:background="@drawable/background_min_max">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:weightSum="30"
+            android:layout_margin="5dp"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_max_song"
+                android:src="@drawable/song_logo"
+                android:layout_width="70dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="50"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_min_title"
+                android:textColor="@color/text"
+                android:text="@string/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_min_artist"
+                android:textColor="@color/text"
+                android:text="@string/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="30"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_min_previous"
+                android:src="@mipmap/previous"
+                android:layout_width="35dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/iv_min_play"
+                android:src="@drawable/play"
+                android:layout_width="35dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/iv_min_next"
+                android:src="@mipmap/next"
+                android:layout_width="35dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/seekbar_min"
+        android:theme="@style/CustomSeekBar"
+        android:clickable="true"
+        android:focusable="true"
+        android:thumb="@null"
+        android:minHeight="1dp"
+        android:background="@color/space_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
